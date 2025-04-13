@@ -1,12 +1,14 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  standalone: true,
+  imports: [EmployeeListComponent],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demoangular';
+  title = 'Employee Management';
 }
